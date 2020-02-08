@@ -28,8 +28,9 @@ int bfs(vector<int>&path,vector<vector<int> > matrix) {
                 if (i==1) {flag = false; break;}
             }
         }
-        if (poss.back()==1) { flag=false; /*break;*/} 
-        if (poss.size()==0) { flag=false; /*break;*/}
+        if (poss.size() == 0 || poss.back()==1) {
+             flag=false;
+        } 
     }
     int min = 0;
     if (used[1]==-1) {return min;}
